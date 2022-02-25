@@ -5,6 +5,8 @@ const app = express();
 const cors = require("cors");
 app.use(cors());
 
+const PORT = process.env.PORT || 3000;
+
 app.get("/", function (req, res) {
   try {
     console.log(`/ua-parser`, new Date().toLocaleDateString());
@@ -24,7 +26,7 @@ app.get("/ua-parser", function (req, res) {
   }
 });
 
-app.listen(8000, (_) => {
+app.listen(PORT, (_) => {
   // This is a comment
-  console.log("Server running at Port: 8000");
+  console.log(`Server running on ${PORT}`);
 });
