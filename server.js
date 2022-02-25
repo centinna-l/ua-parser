@@ -2,6 +2,8 @@ var parser = require("ua-parser-js");
 
 const express = require("express");
 const app = express();
+const cors = require("cors");
+app.use(cors());
 
 app.get("/ua-parser", function (req, res) {
   try {
